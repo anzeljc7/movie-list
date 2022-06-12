@@ -95,9 +95,9 @@ function appendData({ id, title, author, lenghtMin, genre }) {
 function sendMessage(msg, type) {
     let icon = type == "alert-danger" ? "<i class='fas fa-exclamation-triangle me-2'></i>" : "";
     $("#message").html(`
-        <div class='${type}' role='alert'>
-        
+        <div class='${type + " alert-dismissible fade show"}' role='alert'>
             ${msg}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>`
     );
 }

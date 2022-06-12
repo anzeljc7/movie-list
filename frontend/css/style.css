@@ -2,7 +2,7 @@
 
 #wrapper{
     overflow: auto;
-    height: 35vh;
+    height: 300px;
     width:60%;
     margin:30px auto;
 }
