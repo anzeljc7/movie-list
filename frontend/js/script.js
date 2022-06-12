@@ -1,5 +1,6 @@
 const url = "https://localhost:7204/Movie"
 const url1 = "https://localhost:5001/Movie"
+const url2 = "http://88.200.103.129:81/Movie"
 let state = false;
 
 //ob nalaganju okna
@@ -49,7 +50,7 @@ $(document).ready(() => {
 
 function getAllMovies() {
     $.ajax({
-        url: url1 + "/getAllMovies",
+        url: url2 + "/getAllMovies",
         type: "GET",
         success: function (result) {
             result.forEach(movie => {
@@ -65,7 +66,7 @@ function getAllMovies() {
 
 function addMovie(movie) {
     $.ajax({
-        url: url1 + "/addMovie",
+        url: url2 + "/addMovie",
         type: 'POST',
         data: JSON.stringify(movie),
         contentType: "application/json; charset=utf-8",
